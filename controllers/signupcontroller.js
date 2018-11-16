@@ -52,11 +52,11 @@ module.exports = {
                 if(data[0].otp==otp){
                     let num=data[0].SlNo;
                     let caterer_id='CAT-'+num+otp;
-                    console.log(cat_id)
-                    await con.query(S.INSERT_CAT_ID,caterer_id);
-                  /*  var token=jwtservice(data);
-                   console.log(token); */
-                   /* res.cookie('jwttoken',token).redirect('/signup/business') */
+                    console.log(caterer_id)
+                    await con.query(S.INSERT_CAT_ID,[caterer_id,mob_number]);
+                   var token=jwtservice(data);
+                   console.log(token);
+                   res.cookie('jwttoken',token).redirect('/signup/business')
                 }
             }
             else{

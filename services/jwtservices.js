@@ -3,7 +3,7 @@ const jwt=require('jsonwebtoken');
 
 
 module.exports=(user)=>{
-    let pk='nanu.suppi';
+    let pk='nanu.nenu';
     const claim={
         iss: 'foodapp',
         data: user,
