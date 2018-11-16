@@ -47,14 +47,13 @@ module.exports = {
         try {
             let otp = req.body.otp;
             let mob_number = req.body.mob_number;
-            var data=await con.query(S.VERIFY_MOBILE_NUM,mob_number);
-            console.log(data)
-            
+            var data=await con.query(S.VERIFY_MOBILE_NUM,mob_number);     
             if(data.length==1){
                 if(data[0].otp==otp){
-                    var num=data[0].SlNo;
-                    var cat_id='CAT-'+num+otp
+                    let num=data[0].SlNo;
+                    let caterer_id='CAT-'+num+otp;
                     console.log(cat_id)
+                    await con.query(S.INSERT_CAT_ID,caterer_id);
                   /*  var token=jwtservice(data);
                    console.log(token); */
                    /* res.cookie('jwttoken',token).redirect('/signup/business') */
