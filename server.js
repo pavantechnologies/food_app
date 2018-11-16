@@ -14,6 +14,10 @@ app.use(bodyparser.json());
 
 
 
+
+
+
+
 app.use('/signup',signuproutes);
 app.use('/login',loginroutes);
 app.use('/dashboard',dashboardroutes);
