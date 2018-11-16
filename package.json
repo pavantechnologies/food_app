@@ -1,0 +1,27 @@
+{
+  "name": "food_app",
+  "version": "1.0.0",
+  "description": "food app for",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "real",
+    "time"
+  ],
+  "author": "nanu",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.3.0",
+    "modules": "^0.4.0",
+    "mysql": "^2.16.0",
+    "otp-generator": "^1.1.0"
+  },
+  "devDependencies": {}
+}
